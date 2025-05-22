@@ -325,8 +325,8 @@ footer {
         }
 
         #ps {
-            align-self: baseline;
-            margin-left: 50px;
+            align-self: end;
+            margin-right: 50px;
             cursor: default;
             @include use-color(bright, text);
         }

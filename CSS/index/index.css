@@ -325,8 +325,8 @@ footer #footerInfo #footerLinks a img {
   margin: 2rem 0.5rem;
 }
 footer #footerInfo #ps {
-  align-self: baseline;
-  margin-left: 50px;
+  align-self: end;
+  margin-right: 50px;
   cursor: default;
   color: #EEEEEE;
 }/*# sourceMappingURL=index.css.map */
