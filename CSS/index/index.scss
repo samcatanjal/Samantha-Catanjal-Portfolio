@@ -179,7 +179,123 @@ main {
     }
 
     #worksSection {
+        @include flex(row, center, center);
         @include use-color(lightdark, background);
+        min-height: 100vh;
+        height: auto;
+
+        #info3 {
+            width: 80%;
+            height: 70%;
+            padding: 8rem 2rem;
+            text-align: center;
+
+            @include use-color(bright, text);
+            @include flex(column, baseline, center);
+
+            h2 {
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+
+                .highlight {
+                    @include use-color(light, text);
+                }
+            }
+
+            .filters {
+                margin-bottom: 2.5rem;
+
+                .filter-btn {
+                    border: none;
+                    padding: 0.6rem 1.5rem;
+                    margin: 0.5rem;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    transition: background 0.3s ease;
+
+                    @include use-color(dark, background);
+                    @include use-color(bright, text);
+
+                    &.active,
+                    &:hover {
+                        @include use-color(light, background);
+                    }
+                }
+            }
+
+            .portfolio-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
+
+                a {
+                    text-decoration: none;
+                    @include use-color(bright, text);
+                }
+
+                .portfolio-item {
+                    position: relative;
+                    width: 280px;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    border: 2px solid rgba(255, 255, 255, 0.3);
+                    padding: 0.8rem;
+                    cursor: pointer;
+
+                .image-wrapper {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    position: relative; 
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 15px;
+                        border: none;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: transform 0.4s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2000;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 90%;
+                max-height: 90%;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 224, 255, 0.4);
+            }
+
+            .close-btn {
+                position: absolute;
+                top: 1.5rem;
+                right: 2rem;
+                font-size: 3rem;
+                color: white;
+                cursor: pointer;
+                z-index: 2100;
+            }
+        }
     }
 
     #contactSection {
