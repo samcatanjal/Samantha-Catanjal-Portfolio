@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Samantha Catanjal</title>
+
+    <link rel="stylesheet" href="/CSS/index/index.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navTitle"><p>My <span>Portfolio</span></p></div>
+            <ul>
+                <li><a href="#homeSection">Home</a></li>
+                <li><a href="#aboutSection">About Me</a></li>
+                <li><a href="#contactSection">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="homeSection" class="sections">
+            <div id="info">
+                <aside>
+                    <h1>My <span>Portfolio</span></h1>
+                    <sub>Samantha Arianne E. Catanjal</sub>
+
+                    <a href="/Assets/Files/Samantha Catanjal_CV.pdf" download id="cvButton">Download CV <img src="/Assets/Icons/download.svg" alt=""></a>
+                </aside>
+                <img src="" alt="">
+            </div>
+        </div>
+        <div id="aboutSection" class="sections">
+            <div id="info2">
+                <img src="" alt="">
+                <aside>
+                    <h2>About <span>Me</span></h2>
+                    <p>Hi! I’m <b>Sam</b>, a graduating student from Bath Spa University in RAK, UAE, majoring in Creative Computing. I’m passionate about blending creativity with technology, and I love diving into projects that let me explore both. Whether I’m coding an interactive experience, experimenting with new tech, or just jamming out to music or playing video games, I’m always looking to learn something new.<br><br>I’m eager to step into the professional world where I can grow, contribute, and keep building on everything I’ve learned so far. My friends would describe me as loyal, attentive, and someone who always has their back and I bring that same energy to any team I’m part of. I believe in collaboration, paying attention to the details, and showing up for others, whether it’s in a group project or a workplace setting.<br><br>I'm excited about the journey ahead and always open to new opportunities where I can learn, create, and make a meaningful impact.</p>
+                </aside>
+            </div>
+        </div>
+        <div id="worksSection" class="sections"></div>
+        <div id="contactSection" class="sections">
+            <div id="info4">
+                <img src="" alt="">
+                <aside class="contactForm">
+                    <form id="contactForm">
+                        <div class="input-group">
+                        <div class="input-box">
+                            <label for="name">Your name</label>
+                            <input type="text" id="name" name="from_name" placeholder="Name" required />
+                        </div>
+                        <div class="input-box">
+                            <label for="email">Your email</label>
+                            <input type="email" id="email" name="reply_to" placeholder="Email" required />
+                        </div>
+                        </div>
+
+                        <div class="textarea-box">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                        Send Message
+                        <img src="/Assets/Icons/send.svg" alt="send icon" />
+                        </button>
+                    </form>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footerInfo">
+            <ul>
+                <li><a href="#homeSection"><img src="/Assets/Icons/home.svg" alt=""><p>Home</p></a></li>
+                <li><a href="#aboutSection"><img src="/Assets/Icons/user.svg" alt=""><p>About Me</p></a></li>
+                <li><a href="#contactSection"><img src="/Assets/Icons/phone.svg" alt=""><p>Contact</p></a></li>
+            </ul>
+
+            <div id="footerLinks">
+                <a href="https://www.facebook.com/sam.catanjal"><img src="/Assets/Icons/fb.svg" alt=""></a>
+                <a href="https://www.instagram.com/samcatanjal/"><img src="/Assets/Icons/insta.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/samantha-catanjal"><img src="/Assets/Icons/linkedin.svg" alt=""></a>
+                <a href=""><img src="/Assets/Icons/youtube.svg" alt=""></a>
+            </div>
+
+            <p id="ps">Made by Me <3 </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init("YBKSV1SFDdyaVvgC7");
+        })();
+    </script>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>

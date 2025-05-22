@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 0.1px solid black;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%), linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
+  background-size: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #222831;
+}
+header nav {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+header nav #navTitle {
+  width: 50%;
+  padding: 0 100px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-style: italic;
+  cursor: default;
+  color: #EEEEEE;
+}
+header nav #navTitle span {
+  color: #00ADB5;
+}
+header nav ul {
+  list-style: none;
+  gap: 20px;
+  width: 50%;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+header nav ul li {
+  padding: 5%;
+}
+header nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.1s;
+  color: #EEEEEE;
+}
+header nav ul li a:hover {
+  transform: scale(1.05);
+  color: #00ADB5;
+}
+
+main .sections {
+  height: 100vh;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.062745098) 1px, transparent 0), radial-gradient(rgba(0, 0, 0, 0.0196078431) 1px, transparent 0);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}
+main #homeSection {
+  background-color: #222831;
+  color: #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+main #homeSection #info {
+  width: 80%;
+  height: 70%;
+}
+main #homeSection #info aside {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+main #homeSection #info aside h1 {
+  font-size: 5rem;
+  cursor: default;
+  color: #EEEEEE;
+}
+main #homeSection #info aside h1 span {
+  color: #00ADB5;
+}
+main #homeSection #info aside sub {
+  font-size: 1.5rem;
+  font-style: italic;
+  cursor: default;
+}
+main #homeSection #info aside #cvButton {
+  text-decoration: none;
+  margin: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  color: #EEEEEE;
+  background-color: #393E46;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+main #homeSection #info aside #cvButton img {
+  height: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 0.5rem;
+}
+main #homeSection #info aside #cvButton:hover {
+  background-color: #00ADB5;
+}
+main #homeSection #info img {
+  width: 50%;
+}
+main #aboutSection {
+  background-color: #EEEEEE;
+  color: #393E46;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: default;
+}
+main #aboutSection #info2 {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+main #aboutSection #info2 img {
+  width: 35%;
+}
+main #aboutSection #info2 aside {
+  width: 65%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+main #aboutSection #info2 aside h2 {
+  align-self: end;
+  font-size: 4rem;
+  margin: 1.5rem 0;
+}
+main #aboutSection #info2 aside h2 span {
+  color: #00ADB5;
+}
+main #aboutSection #info2 aside p {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+main #worksSection {
+  background-color: #393E46;
+}
+main #contactSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #222831;
+}
+main #contactSection #info4 {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+main #contactSection #info4 img {
+  width: 50%;
+}
+main #contactSection #info4 .contact-form {
+  width: 50%;
+  margin: auto;
+}
+main #contactSection #info4 .input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+main #contactSection #info4 .input-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+main #contactSection #info4 .input-box label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #EEEEEE;
+}
+main #contactSection #info4 .input-box input,
+main #contactSection #info4 .textarea-box textarea {
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #393E46;
+  color: #EEEEEE;
+}
+main #contactSection #info4 .input-box input::-moz-placeholder, main #contactSection #info4 .textarea-box textarea::-moz-placeholder {
+  color: #888;
+}
+main #contactSection #info4 .input-box input::placeholder,
+main #contactSection #info4 .textarea-box textarea::placeholder {
+  color: #888;
+}
+main #contactSection #info4 .textarea-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+main #contactSection #info4 .textarea-box label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #EEEEEE;
+}
+main #contactSection #info4 .submit-btn {
+  gap: 0.5rem;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: #EEEEEE;
+  background-color: #00ADB5;
+}
+main #contactSection #info4 .submit-btn:hover {
+  background-color: #00bfb3;
+}
+main #contactSection #info4 .submit-btn img {
+  width: 18px;
+  height: auto;
+}
+
+footer {
+  width: 100%;
+  height: 250px;
+  border-top: 0.1px solid black;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%), linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
+  background-size: 20px 20px;
+  background-color: #222831;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+footer #footerInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+footer #footerInfo ul {
+  gap: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+footer #footerInfo ul li {
+  list-style: none;
+  cursor: pointer;
+}
+footer #footerInfo ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #EEEEEE;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+footer #footerInfo ul li a img {
+  margin: 0 1rem;
+}
+footer #footerInfo #footerLinks a img {
+  margin: 2rem 0.5rem;
+}
+footer #footerInfo #ps {
+  align-self: baseline;
+  margin-left: 50px;
+  cursor: default;
+  color: #EEEEEE;
+}/*# sourceMappingURL=index.css.map */

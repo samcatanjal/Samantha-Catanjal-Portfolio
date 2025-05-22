@@ -1,0 +1,28 @@
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Mixin for media queries
+@mixin respond-to($breakpoint, $type: min) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if $size {
+    @if $type == min {
+      @media (min-width: $size) {
+        @content;
+      }
+    } @else if $type == max {
+      @media (max-width: $size) {
+        @content;
+      }
+    } @else {
+      @warn "Type must be 'min' or 'max'.";
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found.";
+  }
+}

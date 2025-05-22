@@ -1,0 +1,20 @@
+$colors: (
+    dark: #222831,
+    lightdark: #393E46,
+    light: #00ADB5,
+    bright: #EEEEEE
+);
+
+@mixin use-color($name, $type: background) {
+  $color: map-get($colors, $name);
+
+  @if $color {
+    @if $type == background {
+      background-color: $color;
+    } @else if $type == text {
+      color: $color;
+    }
+  } @else {
+    @warn "Color `#{$name}` not found in the color map.";
+  }
+}
