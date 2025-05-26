@@ -94,6 +94,9 @@ main {
         #info {
             width: 80%;
             height: 70%;
+            gap: 5rem;
+
+            @include flex(row, center, center);
 
             aside {
                 width: 50%;
@@ -136,7 +139,7 @@ main {
                 }
             }
             img {
-                width: 50%;
+                height: 65vh;
             }
         }  
     }
@@ -150,6 +153,7 @@ main {
         #info2 {
             width: 80%;
             height: 70%;
+            gap: 5rem;
 
             @include flex(row, center, center);
 
@@ -307,6 +311,7 @@ main {
         #info4 {
             width: 80%;
             height: 70%;
+            gap: 5rem;
             @include flex(row, center, center);
 
             img {
