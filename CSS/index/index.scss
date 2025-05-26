@@ -1,6 +1,6 @@
 @import '../mixins/colors';
-@import '../mixins/viewports';
 @import '../mixins/flex';
+@import '../mixins/viewports';
 
 * {
     margin: 0;
@@ -71,6 +71,7 @@ header {
         #menu {
             height: 50px;
             margin-right: 8vw;
+            cursor: pointer;
         }
     }
 }
@@ -96,6 +97,7 @@ main {
             height: 70%;
             gap: 5rem;
 
+            @include viewport(null, 1000px) {width: 100%; flex-direction:column-reverse; gap: 3rem;}
             @include flex(row, center, center);
 
             aside {
@@ -107,6 +109,8 @@ main {
                     font-size: 5rem;
                     cursor: default;
                     @include use-color(bright, text);
+                    @include viewport(null, 1390px) {font-size: 3rem}
+                    @include viewport(null, 730px) {font-size: 2rem}
 
                     span {
                         @include use-color(light, text);
@@ -116,6 +120,8 @@ main {
                     font-size: 1.5rem;
                     font-style: italic;
                     cursor: default;
+
+                    @include viewport(null, 730px) {font-size: 1rem}
                 }
                 #cvButton {
                     text-decoration: none;
@@ -139,7 +145,8 @@ main {
                 }
             }
             img {
-                height: 65vh;
+                height: 35vw;
+                @include viewport(null, 1000px) {display: none;}
             }
         }  
     }
@@ -158,19 +165,22 @@ main {
             @include flex(row, center, center);
 
             img {
-                width: 35%;
+                width: 30vw;
+                @include viewport(null, 1000px) {display: none;}
             }
 
             aside {
                 width: 65%;
                 padding: 1.5rem;
 
+                @include viewport(null, 1000px) {width: 100%;}
                 @include flex(column, center, center);
 
                 h2 {
                     align-self: end;
                     font-size: 4rem;
                     margin: 1.5rem 0;
+                    @include viewport(null, 1390px) {font-size: 2.5rem}
                     
                     span {
                         @include use-color(light, text);
@@ -179,6 +189,8 @@ main {
                 p {
                     text-align: justify;
                     font-size: 1.2rem;
+                    @include viewport(null, 1390px) {font-size: .9rem}
+                    @include viewport(null, 1000px) {font-size: 1rem}
                 }
             }
         }
@@ -315,7 +327,8 @@ main {
             @include flex(row, center, center);
 
             img {
-                width: 50%;
+                width: 40vw;
+                @include viewport(null, 1000px) {display: none;}
             }
 
             .contact-form {
@@ -458,13 +471,18 @@ footer {
 
 //////////////////////////
 
-@include viewport(811px, null) {
+@media screen and (min-width: 810px) and (max-width: 1390px) {
+    h1 {font-size: .5rem;}
+    h2 {font-size: .5rem;}
+}
+
+@media (min-width: 811px){
     #menu {
         display: none;
     }
 }
 
-@include viewport(null, 810px) {
+@media (max-width: 810px) {
     nav {
         #navItems {
             display: none;
@@ -489,31 +507,6 @@ footer {
             }
         }
     }
-
-
-    #contactSection {
-        img {
-            display: none;
-        }
-    }
 }
 
-#homeSection, #aboutSection {
-    @include viewport(null, 810px) {
-        .infos {
-            width: 100%;
 
-            aside {
-                width: 100%;
-                margin: 0 auto;
-                text-align: center;
-            }
-
-            p {
-                font-size: 12px;
-            }
-
-            .bg {display: none;}
-        }
-    } 
-}

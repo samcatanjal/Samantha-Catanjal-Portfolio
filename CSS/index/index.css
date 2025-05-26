@@ -67,6 +67,7 @@ header nav ul li a:hover {
 header nav #menu {
   height: 50px;
   margin-right: 8vw;
+  cursor: pointer;
 }
 
 main .sections {
@@ -94,6 +95,13 @@ main #homeSection #info {
   align-items: center;
   flex-wrap: nowrap;
 }
+@media (max-width: 1000px) {
+  main #homeSection #info {
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+}
 main #homeSection #info aside {
   width: 50%;
   height: 100%;
@@ -108,6 +116,16 @@ main #homeSection #info aside h1 {
   cursor: default;
   color: #EEEEEE;
 }
+@media (max-width: 1390px) {
+  main #homeSection #info aside h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 730px) {
+  main #homeSection #info aside h1 {
+    font-size: 2rem;
+  }
+}
 main #homeSection #info aside h1 span {
   color: #00ADB5;
 }
@@ -115,6 +133,11 @@ main #homeSection #info aside sub {
   font-size: 1.5rem;
   font-style: italic;
   cursor: default;
+}
+@media (max-width: 730px) {
+  main #homeSection #info aside sub {
+    font-size: 1rem;
+  }
 }
 main #homeSection #info aside #cvButton {
   text-decoration: none;
@@ -139,7 +162,12 @@ main #homeSection #info aside #cvButton:hover {
   background-color: #00ADB5;
 }
 main #homeSection #info img {
-  height: 65vh;
+  height: 35vw;
+}
+@media (max-width: 1000px) {
+  main #homeSection #info img {
+    display: none;
+  }
 }
 main #aboutSection {
   background-color: #EEEEEE;
@@ -162,7 +190,12 @@ main #aboutSection #info2 {
   flex-wrap: nowrap;
 }
 main #aboutSection #info2 img {
-  width: 35%;
+  width: 30vw;
+}
+@media (max-width: 1000px) {
+  main #aboutSection #info2 img {
+    display: none;
+  }
 }
 main #aboutSection #info2 aside {
   width: 65%;
@@ -173,10 +206,20 @@ main #aboutSection #info2 aside {
   align-items: center;
   flex-wrap: nowrap;
 }
+@media (max-width: 1000px) {
+  main #aboutSection #info2 aside {
+    width: 100%;
+  }
+}
 main #aboutSection #info2 aside h2 {
   align-self: end;
   font-size: 4rem;
   margin: 1.5rem 0;
+}
+@media (max-width: 1390px) {
+  main #aboutSection #info2 aside h2 {
+    font-size: 2.5rem;
+  }
 }
 main #aboutSection #info2 aside h2 span {
   color: #00ADB5;
@@ -184,6 +227,16 @@ main #aboutSection #info2 aside h2 span {
 main #aboutSection #info2 aside p {
   text-align: justify;
   font-size: 1.2rem;
+}
+@media (max-width: 1390px) {
+  main #aboutSection #info2 aside p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 1000px) {
+  main #aboutSection #info2 aside p {
+    font-size: 1rem;
+  }
 }
 main #worksSection {
   display: flex;
@@ -315,7 +368,12 @@ main #contactSection #info4 {
   flex-wrap: nowrap;
 }
 main #contactSection #info4 img {
-  width: 50%;
+  width: 40vw;
+}
+@media (max-width: 1000px) {
+  main #contactSection #info4 img {
+    display: none;
+  }
 }
 main #contactSection #info4 .contact-form {
   width: 50%;
@@ -448,6 +506,14 @@ footer #footerInfo #ps {
   color: #EEEEEE;
 }
 
+@media screen and (min-width: 810px) and (max-width: 1390px) {
+  h1 {
+    font-size: 0.5rem;
+  }
+  h2 {
+    font-size: 0.5rem;
+  }
+}
 @media (min-width: 811px) {
   #menu {
     display: none;
@@ -471,24 +537,5 @@ footer #footerInfo #ps {
     border-top: 0.1px solid black;
     display: flex;
     padding: 2rem 0;
-  }
-  #contactSection img {
-    display: none;
-  }
-}
-@media (max-width: 810px) {
-  #homeSection .infos, #aboutSection .infos {
-    width: 100%;
-  }
-  #homeSection .infos aside, #aboutSection .infos aside {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  #homeSection .infos p, #aboutSection .infos p {
-    font-size: 12px;
-  }
-  #homeSection .infos .bg, #aboutSection .infos .bg {
-    display: none;
   }
 }/*# sourceMappingURL=index.css.map */
