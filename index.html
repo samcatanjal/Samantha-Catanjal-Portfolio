@@ -16,31 +16,32 @@
     <header>
         <nav>
             <div id="navTitle"><p>My <span>Portfolio</span></p></div>
-            <ul>
+            <ul id="navItems">
                 <li><a href="#homeSection">Home</a></li>
                 <li><a href="#aboutSection">About Me</a></li>
                 <li><a href="#worksSection">My Works</a></li>
                 <li><a href="#contactSection">Contact</a></li>
             </ul>
+            <img src="/Assets/Icons/hamburger.png" alt="" id="menu" onclick="toggle_menu()">
         </nav>
     </header>
 
     <main>
         <div id="homeSection" class="sections">
-            <div id="info">
+            <div id="info" class="infos">
                 <aside>
                     <h1>My <span>Portfolio</span></h1>
                     <sub>Samantha Arianne E. Catanjal</sub>
 
-                    <a href="/Assets/Files/Samantha Catanjal_CV.pdf" download id="cvButton">Download CV <img src="/Assets/Icons/download.svg" alt=""></a>
+                    <a href="" download id="cvButton">Download CV <img src="/Assets/Icons/download.svg" alt=""></a>
                 </aside>
-                <img src="" alt="">
+                <img class="bg" src="" alt="">
             </div>
         </div>
 
         <div id="aboutSection" class="sections">
-            <div id="info2">
-                <img src="" alt="">
+            <div id="info2" class="infos">
+                <img class="bg" src="" alt="">
                 <aside>
                     <h2>About <span>Me</span></h2>
                     <p>Hi! I’m <b>Sam</b>, a graduating student from Bath Spa University in RAK, UAE, majoring in Creative Computing. I’m passionate about blending creativity with technology, and I love diving into projects that let me explore both. Whether I’m coding an interactive experience, experimenting with new tech, or just jamming out to music or playing video games, I’m always looking to learn something new.<br><br>I’m eager to step into the professional world where I can grow, contribute, and keep building on everything I’ve learned so far. My friends would describe me as loyal, attentive, and someone who always has their back and I bring that same energy to any team I’m part of. I believe in collaboration, paying attention to the details, and showing up for others, whether it’s in a group project or a workplace setting.<br><br>I'm excited about the journey ahead and always open to new opportunities where I can learn, create, and make a meaningful impact.</p>
@@ -49,7 +50,7 @@
         </div>
 
         <div id="worksSection" class="sections">
-            <div id="info3">
+            <div id="info3" class="infos">
                 <h2><span>My</span> <span class="highlight">works</span></h2>
 
                 <div class="filters">
@@ -162,7 +163,7 @@
         </div>
 
         <div id="contactSection" class="sections">
-            <div id="info4">
+            <div id="info4" class="infos">
                 <img src="" alt="">
                 <aside class="contactForm">
                     <form id="contactForm">

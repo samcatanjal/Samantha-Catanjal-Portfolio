@@ -73,4 +73,35 @@ closeModal.addEventListener('click', () => {
   modalContent.innerHTML = ''; // Clear modal content to stop videos
 });
 
-  
+////////////////////////
+
+function toggle_menu() {
+    const navItems = document.getElementById("navItems");
+    navItems.classList.toggle("show-menu");
+
+    // Toggle document click listener
+    if (navItems.classList.contains("show-menu")) {
+        document.addEventListener("click", closeMenuOnClickOutside);
+    } else {
+        document.removeEventListener("click", closeMenuOnClickOutside);
+    }
+}
+
+function closeMenuOnClickOutside(event) {
+    const navItems = document.getElementById("navItems");
+    const menuButton = document.getElementById("menu");
+
+    // If click is outside navItems and menu button, close the menu
+    if (!navItems.contains(event.target) && !menuButton.contains(event.target)) {
+        navItems.classList.remove("show-menu");
+        document.removeEventListener("click", closeMenuOnClickOutside);
+    }
+}
+
+document.querySelectorAll('#navItems a').forEach(link => {
+    link.addEventListener('click', () => {
+        const navItems = document.getElementById("navItems");
+        navItems.classList.remove("show-menu");
+        document.removeEventListener("click", closeMenuOnClickOutside);
+    });
+});

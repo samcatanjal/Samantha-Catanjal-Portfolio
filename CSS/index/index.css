@@ -32,8 +32,9 @@ header nav {
   flex-wrap: nowrap;
 }
 header nav #navTitle {
-  width: 50%;
-  padding: 0 100px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 8vw;
   font-weight: bold;
   font-size: 1.5rem;
   font-style: italic;
@@ -45,17 +46,13 @@ header nav #navTitle span {
 }
 header nav ul {
   list-style: none;
-  gap: 20px;
-  width: 50%;
-  padding: 0 100px;
+  margin-right: 8vw;
+  gap: 6vw;
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
   flex-wrap: nowrap;
-}
-header nav ul li {
-  padding: 5%;
 }
 header nav ul li a {
   display: inline-block;
@@ -66,6 +63,10 @@ header nav ul li a {
 header nav ul li a:hover {
   transform: scale(1.05);
   color: #00ADB5;
+}
+header nav #menu {
+  height: 50px;
+  margin-right: 8vw;
 }
 
 main .sections {
@@ -437,4 +438,49 @@ footer #footerInfo #ps {
   margin-right: 50px;
   cursor: default;
   color: #EEEEEE;
+}
+
+@media (min-width: 811px) {
+  #menu {
+    display: none;
+  }
+}
+@media (max-width: 810px) {
+  nav #navItems {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%), linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
+    background-size: 20px 20px;
+    background-color: #222831;
+  }
+  nav #navItems.show-menu {
+    border-top: 0.1px solid black;
+    display: flex;
+    padding: 2rem 0;
+  }
+  #contactSection img {
+    display: none;
+  }
+}
+@media (max-width: 810px) {
+  #homeSection .infos, #aboutSection .infos {
+    width: 100%;
+  }
+  #homeSection .infos aside, #aboutSection .infos aside {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #homeSection .infos p, #aboutSection .infos p {
+    font-size: 12px;
+  }
+  #homeSection .infos .bg, #aboutSection .infos .bg {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */
