@@ -69,6 +69,11 @@ header nav #menu {
   margin-right: 8vw;
   cursor: pointer;
 }
+@media (min-width: 811px) {
+  header nav #menu {
+    display: none;
+  }
+}
 
 main .sections {
   height: 100vh;
@@ -161,11 +166,11 @@ main #homeSection #info aside #cvButton img {
 main #homeSection #info aside #cvButton:hover {
   background-color: #00ADB5;
 }
-main #homeSection #info img {
+main #homeSection #info .bg {
   height: 35vw;
 }
 @media (max-width: 1000px) {
-  main #homeSection #info img {
+  main #homeSection #info .bg {
     display: none;
   }
 }
@@ -189,11 +194,11 @@ main #aboutSection #info2 {
   align-items: center;
   flex-wrap: nowrap;
 }
-main #aboutSection #info2 img {
+main #aboutSection #info2 .bg {
   width: 30vw;
 }
 @media (max-width: 1000px) {
-  main #aboutSection #info2 img {
+  main #aboutSection #info2 .bg {
     display: none;
   }
 }
@@ -367,11 +372,11 @@ main #contactSection #info4 {
   align-items: center;
   flex-wrap: nowrap;
 }
-main #contactSection #info4 img {
+main #contactSection #info4 .bg {
   width: 40vw;
 }
 @media (max-width: 1000px) {
-  main #contactSection #info4 img {
+  main #contactSection #info4 .bg {
     display: none;
   }
 }
@@ -506,19 +511,6 @@ footer #footerInfo #ps {
   color: #EEEEEE;
 }
 
-@media screen and (min-width: 810px) and (max-width: 1390px) {
-  h1 {
-    font-size: 0.5rem;
-  }
-  h2 {
-    font-size: 0.5rem;
-  }
-}
-@media (min-width: 811px) {
-  #menu {
-    display: none;
-  }
-}
 @media (max-width: 810px) {
   nav #navItems {
     display: none;

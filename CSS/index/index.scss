@@ -72,6 +72,7 @@ header {
             height: 50px;
             margin-right: 8vw;
             cursor: pointer;
+            @include viewport(811px, null) {display: none;}
         }
     }
 }
@@ -144,7 +145,7 @@ main {
                     }
                 }
             }
-            img {
+            .bg {
                 height: 35vw;
                 @include viewport(null, 1000px) {display: none;}
             }
@@ -164,7 +165,7 @@ main {
 
             @include flex(row, center, center);
 
-            img {
+            .bg {
                 width: 30vw;
                 @include viewport(null, 1000px) {display: none;}
             }
@@ -326,7 +327,7 @@ main {
             gap: 5rem;
             @include flex(row, center, center);
 
-            img {
+            .bg {
                 width: 40vw;
                 @include viewport(null, 1000px) {display: none;}
             }
@@ -470,17 +471,6 @@ footer {
 }
 
 //////////////////////////
-
-@media screen and (min-width: 810px) and (max-width: 1390px) {
-    h1 {font-size: .5rem;}
-    h2 {font-size: .5rem;}
-}
-
-@media (min-width: 811px){
-    #menu {
-        display: none;
-    }
-}
 
 @media (max-width: 810px) {
     nav {
